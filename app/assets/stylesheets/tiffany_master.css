@@ -1,0 +1,27 @@
+#u156
+{
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	position: relative;
+	background: #212121 url("../assets/penfact-it-bckgrnd-u156-fr.jpg") no-repeat left top;
+}
+
+#u994_img,#u988_img,#u1006_img,#u1000_img
+{
+	vertical-align: top;
+}
+
+#u994,#u159-4,#u988,#u157-4,#u1006,#u160-4,#u1000,#u158-8,#u981-4
+{
+	position: relative;
+}
+
+#u159-4_img,#u157-4_img,#u160-4_img,#u158-8_img,#u981-4_img
+{
+	display: block;
+	vertical-align: top;
+}
+
