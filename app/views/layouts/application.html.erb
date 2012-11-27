@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Uncomment to make IE8 render like IE7 -->
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title><%= full_title(yield(:title)) %></title>
+	
+	<!-- Included CSS Files -->
+	<%= stylesheet_link_tag    "application" %>
+	<%= stylesheet_link_tag    "pfeast42zero" %>
+	
+	<!-- Included JS Files  -->
+	<%= javascript_include_tag "application" %>
+  
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="row">
+		
+		<ul class="nav-bar">
+		
+		<li class="
+		<% if current_page?(:controller => 'static_pages', :action => 'index') %>
+		active
+		<% end %>">
+			 <%= link_to("Home", { :controller => "static_pages", :action => "index" }) %>
+		</li>
+		
+		<li class="
+		<% if current_page?(:controller => 'users') %>
+		active
+		<% end %>">
+			<%= link_to("Users", { :controller => "users"}) %>
+		</li>
+		
+		<li class="
+		<% if current_page?(:controller => 'static_pages',:action=>"about") %>
+		active
+		<% end %>">
+			<%= link_to("About", { :controller => "static_pages", :action => "about" }) %>
+		</li>
+		
+		<li class="
+		<% if current_page?(:controller => 'products') %>
+		active
+		<% end %>">
+			<%= link_to("Business IT Services", { :controller => "products"}) %>
+		</li>
+		
+		<li class="
+		<% if current_page?(:controller => "static_pages", :action => "admin") %>
+		active
+		<% end %>">
+			<%= link_to("Secret Admin Seccion", { :controller => "static_pages", :action => "admin"}) %>
+		</li>
+			
+		</ul>
+		
+		<h1>Gainesville IT Services</h1>
+		<h4 class="subheader">Super good service, etc.</h4>
+		<hr>
+		
+	
+		<%= yield %>
+		
+</div>
+</body>
+</html>
