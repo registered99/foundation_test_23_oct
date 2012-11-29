@@ -26,53 +26,53 @@
 </head>
 <body>
 <div class="row">
-		
-		<ul class="nav-bar">
-		
-		<li class="
-		<% if current_page?(:controller => 'static_pages', :action => 'index') %>
-		active
-		<% end %>">
-			 <%= link_to("Home", { :controller => "static_pages", :action => "index" }) %>
-		</li>
-		
-		<li class="
-		<% if current_page?(:controller => 'users') %>
-		active
-		<% end %>">
-			<%= link_to("Users", { :controller => "users"}) %>
-		</li>
-		
-		<li class="
-		<% if current_page?(:controller => 'static_pages',:action=>"about") %>
-		active
-		<% end %>">
-			<%= link_to("About", { :controller => "static_pages", :action => "about" }) %>
-		</li>
-		
-		<li class="
-		<% if current_page?(:controller => 'products') %>
-		active
-		<% end %>">
-			<%= link_to("Business IT Services", { :controller => "products"}) %>
-		</li>
-		
-		<li class="
-		<% if current_page?(:controller => "static_pages", :action => "admin") %>
-		active
-		<% end %>">
-			<%= link_to("Secret Admin Seccion", { :controller => "static_pages", :action => "admin"}) %>
-		</li>
+		<div class="twelve columns">
+			<ul class="nav-bar">
 			
-		</ul>
+			<li class="
+			<% if current_page?(:controller => 'static_pages', :action => 'index') %>
+			active
+			<% end %>">
+				 <%= link_to("Home", { :controller => "static_pages", :action => "index" }) %>
+			</li>
+			
+			<li class="
+			<% if current_page?(:controller => 'users') %>
+			active
+			<% end %>">
+				<%= link_to("Users", { :controller => "users"}) %>
+			</li>
+			
+			<li class="
+			<% if current_page?(:controller => 'static_pages',:action=>"about") %>
+			active
+			<% end %>">
+				<%= link_to("About", { :controller => "static_pages", :action => "about" }) %>
+			</li>
+			
+			<li class="
+			<% if current_page?(:controller => 'products') %>
+			active
+			<% end %>">
+				<%= link_to("Business IT Services", { :controller => "products"}) %>
+			</li>
+			
+			<li class="
+			<% if current_page?(:controller => "static_pages", :action => "admin") %>
+			active
+			<% end %>">
+				<%= link_to("Secret Admin Seccion", { :controller => "static_pages", :action => "admin"}) %>
+			</li>
+				
+			</ul>
+			
+			<h1>Gainesville IT Services</h1>
+			<h4 class="subheader">Super good service, etc.</h4>
+			<hr>
+			
 		
-		<h1>Gainesville IT Services</h1>
-		<h4 class="subheader">Super good service, etc.</h4>
-		<hr>
-		
-	
-		<%= yield %>
-		
+			<%= yield %>
+		</div>
 </div>
 </body>
 </html>
