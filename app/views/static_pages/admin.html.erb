@@ -1,5 +1,6 @@
-<h2>Listing products</h2>
+<h2>Admin Page</h2>
 
+<h3>Products</h3>
 <table>
 	<thead>
 	<tr>
@@ -7,6 +8,8 @@
 		<th>Name</th>
 		<th>Description</th>
 		<th>Price</th>
+		<th>Priority</th>
+		<th>Units</th>
 		<th></th>
 		<th></th>
 		<th></th>
@@ -20,6 +23,8 @@
     <td><%= product.name %></td>
     <td><%= product.description %></td>
     <td><%= product.price %></td>
+	<td><%= product.priority %></td>
+	<td><%= product.units %></td>
     <td><%= link_to 'Show', product %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %></td>
